@@ -18,7 +18,7 @@
 <header>
 
     <div class="container">
-        
+
         <nav class="navbar navbar-expand-md navbar-dark ">
             <!-- Brand -->
             <a class="navbar-brand logo" href="index.html">Rooky</a>
@@ -55,7 +55,7 @@
     <div class="text-center heading">
             Find the perfect opportunity to change the world.
     </div>
-    <div class="input-group mb-3">
+    <div class="input-group mb-3" id="location-form"> 
         <div class="input-group-append">
             <span class="input-group-text"><i class="fas fa-search icon"></i> </span>
         </div> 
@@ -63,11 +63,12 @@
         <div class="input-group-append">
             <span class="input-group-text"><i class="fas fa-map-marker-alt icon"></i> </span>
         </div>  
-        <input type="text" class="form-control" placeholder="Philadelphia PA">
+        <input type="text" class="form-control" placeholder="Philadelphia PA" id="location-input">
         <div class="input-group-append">
         <span class="input-group-text"><button type="button" class="btn btn-info">Search</button> </span>
         </div>
     </div>
+    <div id="geometry"></div>
     </div>
 </div>
 <div id="map" style="height:200px;"></div>
@@ -265,9 +266,10 @@
     </footer>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    <script src="assets/js/job-search.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8SB7AdYDEc6tjQB4tU5MOYTbSsBtBw9I&callback=initMap"
    type="text/javascript"></script>
+    <script src="assets/js/job-search.js"></script>
+    
 
 </body>
 </html>

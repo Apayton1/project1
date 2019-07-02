@@ -17,7 +17,9 @@ header{
 }
 .logo{
     font-family: 'Georgia', Times, Times New Roman, serif;
+
     background-color: #17a2b8;
+
     color: #ffffff;
     display: inline-block;
     font-size: 30px;
@@ -50,7 +52,9 @@ nav ul li:first-child a{
 }
 nav ul li.active a,
 nav ul li a:hover{
+
     color: #17a2b8 !important;
+
 }
 @media (min-width: 768px){
 .nav-link{
@@ -72,7 +76,9 @@ nav ul li a:hover{
 }
 .main-heading{
     font-family: 'Georgia', Times, Times New Roman, serif;
+
     color:#17a2b8;
+
     margin: 0 0 20px;
     border-bottom: 2px solid #dddddd;
     padding-bottom: 20px;
@@ -91,6 +97,7 @@ footer{
     left: 0px;
     right: 0px;
 }
+
 
 .navbar-toggler{
     background-color: #17a2b8;

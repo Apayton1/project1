@@ -1,0 +1,186 @@
+body{
+    margin: 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: lightgray;
+    background: url('../images/fishnets-and-hearts.png');
+    background-repeat:repeat; 
+}
+header{
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    box-shadow: 1px 2px 6.5px #bfbebe;
+    
+}
+.header-content{
+   
+    margin: 0 auto;
+}
+.logo{
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    background-color: #3d66c1;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;   
+}
+nav{
+   /* float: right;  */
+}
+nav ul{
+    list-style-type: none;
+    padding: 10px 0px 0px;
+}
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #777777;
+    border-left: 1px solid #dddddd;
+    padding-left: 15px;
+}
+nav ul li:first-child a{
+    border-left: none;
+}
+.nav-link{
+    color: #777777 !important;
+    font-weight: 600;
+}
+.navbar{
+    padding: 0px;
+}
+nav ul li.active a,
+nav ul li a:hover{
+    color: #3d66c1 !important;
+}
+@media (min-width: 768px){
+.nav-link{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.navbar-expand-md{
+    padding: 0;
+}
+}
+.main-content{
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    display: inline-block;
+    margin: 40px auto;
+    padding: 30px;
+    min-height: 300px;
+    width: 100%;
+}
+.main-heading{
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color:#3d66c1;
+    margin: 0 0 20px;
+    border-bottom: 2px solid #dddddd;
+    padding-bottom: 20px;
+}
+.profile-pic{
+    float: left;
+    width: 200px;
+    padding-right: 20px;
+}
+p{
+    color:#777777;
+}
+footer{
+    background-color: #666666;
+    color: #dddddd;
+    text-align: center;
+    padding: 30px 10px 10px;
+    border-top: 8px solid #3d66c1;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.contact-form input[type="text"], .contact-form textarea{
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+    text-indent: 10px;
+}
+.contact-form input[type="submit"]{
+    background-color: #3d66c1;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border:1px solid #3d66c1;
+    color:#ffffff;
+}
+.contact-form input[type="submit"]:hover{
+    background-color: #ffffff;
+    border:1px solid #3d66c1;
+    color:#3d66c1;
+    box-shadow: 1px 2px 7px #3d66c1;
+}
+.portfolio-section{
+    margin-top: 30px;
+}
+.portfolio-box {
+    width: 300px;
+    height: 240px;
+    float: left;
+    display: block;
+}
+.portfolio-box .image-box{
+    width: 280px;
+    height: 200px;
+    display: block;
+    overflow: hidden;
+    
+}
+.portfolio-box .image-box img{
+    height: 200px;
+    display: block;
+    min-width: 280px;
+}
+.portfolio-box .p-name{
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    background-color: #3d66c1;
+    text-align: center;
+    color: #dddddd;
+    padding: 15px 0px;
+    position: relative;
+    top: -60px;
+    width:280px;
+}
+.portfolio-box .p-name:hover {
+    color: #3d66c1 !important;
+    background-color:#ffffff !important;
+    box-shadow: 1px 2px 7px #3d66c1; 
+}
+.navbar-toggler{
+    background-color: #3d66c1;
+}
+.main-outer-box {
+    padding-bottom: 70px;
+}
+@media only screen and (max-width: 768px) {
+    
+    header {
+        text-align: center;
+    }
+   header .col-sm-6{
+       padding: 0px;
+   }
+   nav{
+    float: initial;
+   }
+   nav ul li a{
+       border-left:0px;
+      background-color: #f3f3f3;
+      border-bottom: 2px solid #fff;
+   }
+}
+@media only screen and (max-width: 450px) {
+    .profile-pic{
+        clear: both;
+        float: initial;
+        display: block;
+        padding-bottom: 15px;
+       }
+}

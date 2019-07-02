@@ -17,15 +17,13 @@ header{
 }
 .logo{
     font-family: 'Georgia', Times, Times New Roman, serif;
-    background-color: #3d66c1;
+    background-color: #17a2b8;
     color: #ffffff;
     display: inline-block;
     font-size: 30px;
     padding: 10px;   
 }
-nav{
-   /* float: right;  */
-}
+
 nav ul{
     list-style-type: none;
     padding: 10px 0px 0px;
@@ -52,7 +50,7 @@ nav ul li:first-child a{
 }
 nav ul li.active a,
 nav ul li a:hover{
-    color: #3d66c1 !important;
+    color: #17a2b8 !important;
 }
 @media (min-width: 768px){
 .nav-link{
@@ -74,16 +72,12 @@ nav ul li a:hover{
 }
 .main-heading{
     font-family: 'Georgia', Times, Times New Roman, serif;
-    color:#3d66c1;
+    color:#17a2b8;
     margin: 0 0 20px;
     border-bottom: 2px solid #dddddd;
     padding-bottom: 20px;
 }
-.profile-pic{
-    float: left;
-    width: 200px;
-    padding-right: 20px;
-}
+
 p{
     color:#777777;
 }
@@ -92,95 +86,108 @@ footer{
     color: #dddddd;
     text-align: center;
     padding: 30px 10px 10px;
-    border-top: 8px solid #3d66c1;
-    position: fixed;
+    border-top: 8px solid #17a2b8;
     bottom: 0px;
     left: 0px;
     right: 0px;
 }
-.contact-form input[type="text"], .contact-form textarea{
-    display: block;
-    width: 100%;
-    padding: 15px 0px;
-    text-indent: 10px;
-}
-.contact-form input[type="submit"]{
-    background-color: #3d66c1;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border:1px solid #3d66c1;
-    color:#ffffff;
-}
-.contact-form input[type="submit"]:hover{
-    background-color: #ffffff;
-    border:1px solid #3d66c1;
-    color:#3d66c1;
-    box-shadow: 1px 2px 7px #3d66c1;
-}
-.portfolio-section{
-    margin-top: 30px;
-}
-.portfolio-box {
-    width: 300px;
-    height: 240px;
-    float: left;
-    display: block;
-}
-.portfolio-box .image-box{
-    width: 280px;
-    height: 200px;
-    display: block;
-    overflow: hidden;
-    
-}
-.portfolio-box .image-box img{
-    height: 200px;
-    display: block;
-    min-width: 280px;
-}
-.portfolio-box .p-name{
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    background-color: #3d66c1;
-    text-align: center;
-    color: #dddddd;
-    padding: 15px 0px;
-    position: relative;
-    top: -60px;
-    width:280px;
-}
-.portfolio-box .p-name:hover {
-    color: #3d66c1 !important;
-    background-color:#ffffff !important;
-    box-shadow: 1px 2px 7px #3d66c1; 
-}
+
 .navbar-toggler{
-    background-color: #3d66c1;
+    background-color: #17a2b8;
 }
 .main-outer-box {
     padding-bottom: 70px;
 }
-@media only screen and (max-width: 768px) {
-    
-    header {
-        text-align: center;
-    }
-   header .col-sm-6{
-       padding: 0px;
-   }
-   nav{
-    float: initial;
-   }
-   nav ul li a{
-       border-left:0px;
-      background-color: #f3f3f3;
-      border-bottom: 2px solid #fff;
-   }
+
+.banner-section{
+    background-image: url("https://www.getsmarter.com/blog/wp-content/uploads/2017/02/Career-Goals-Job-Search-Emails-Banner-6.jpg");
+    background-size: cover;
+    padding: 6rem 0;
 }
-@media only screen and (max-width: 450px) {
-    .profile-pic{
-        clear: both;
-        float: initial;
-        display: block;
-        padding-bottom: 15px;
-       }
+.banner-section .heading{
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 20px;
+    text-shadow: 1px 2px 3.5px #000;
+    font-weight: 600;
+}
+.banner-section .input-group{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 1px 2px 17.5px #000;
+}
+.banner-section .form-control{
+    border: none;
+    background: none;
+    padding: 2rem;
+    border-right: 1px solid #e4e4e4;
+}
+.banner-section .form-control:focus{
+   box-shadow: none; 
+}
+.banner-section .input-group-text{
+    background: none;
+    border: none;
+    padding: 0;
+}
+.banner-section button{
+    padding: 20px 30px;
+    border-radius: 0px 30px 30px 0px;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+}
+.banner-section button:hover, .banner-section button:focus,.btn-info:not(:disabled):not(.disabled):active:focus{
+    border: 1px solid #ffffff;
+    box-shadow: none; 
+}
+
+.banner-section .icon{
+    position: relative;
+    left: 20px;
+
+}
+.ratings, .ratings .rating{
+    height: 11px;
+    line-height: 11px;
+    width: 60px;
+    background-image: url('../images/star_2_sm@2x.png');
+    background-size: 12px 22px;
+}
+.company-list{
+    padding: 30px 0px 0px;
+}
+.company-list li{
+    list-style-type: none;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.company-list li:last-child{
+    border-bottom: 1px solid #d9d9d9;  
+}
+.company-list li h5{
+    color: #17a2b8;
+}
+.company-list li .location{
+    color: #909090
+}
+.company-list li.active{
+    background-color: #f3fcfd;
+    border-right: 10px solid #17a2b8;
+}
+.job-details{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f3fcfd;
+    border: 1px solid #d9d9d9;
+    max-height: 700px;
+    overflow: auto;
+}
+.job-details .top{
+    background-color: #fff;
+    margin: -20px -20px 15px;
+    padding: 20px;
+    box-shadow: 1px 2px 6.5px #c0c0c0;
+    border-top: 5px solid #17a2b8;
 }

@@ -131,4 +131,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 
 // }
-

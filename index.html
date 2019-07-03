@@ -10,44 +10,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
-<div>
-    <div class="container">
-        <br/>
-        <div class="row">
-        <div class="col-sm-6">
-                What
-            <div class="input-group mb-3">
-                
-                <input type="text" class="form-control" placeholder="Web Designer">
-                <div class="input-group-append">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-                Where
-            <div class="input-group mb-3">
-               
-                <input type="text" class="form-control" placeholder="Philadelphia PA">
-                <div class="input-group-append">
-                <span class="input-group-text"><i class="fas fa-search"></i> </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <header>
 
     <div class="container">
 
         <nav class="navbar navbar-expand-md navbar-dark ">
             <!-- Brand -->
-            <a class="navbar-brand logo" href="index.html">ROOKY</a>
+            <a class="navbar-brand logo" href="index.html">Rooky</a>
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -66,58 +40,237 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" title=" ">Menu2</a>
                     </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal" title=" ">Login</a>
+                    </li>
+                   
                 </ul>
             </div> 
         </nav>
     </div>
 </header>
 
-
-<div id="demo" class="carousel slide" data-ride="carousel">
-
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://www.getsmarter.com/blog/wp-content/uploads/2017/02/Career-Goals-Job-Search-Emails-Banner-6.jpg" alt=" " width="100%" height="400">
-          </div>
-          <div class="carousel-item">
-            <img src="https://www.getsmarter.com/blog/wp-content/uploads/2017/02/Career-Goals-Job-Search-Emails-Banner-6.jpg" alt=" " width="100%" height="400">
-          </div>
-          <div class="carousel-item">
-            <img src="https://www.getsmarter.com/blog/wp-content/uploads/2017/02/Career-Goals-Job-Search-Emails-Banner-6.jpg" alt=" " width="100%" height="400">
-          </div>
-        </div>
-        
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
-
-    <div class="container main-outer-box">
-        <div class="main-content">
-            <h1 class="main-heading">About us</h1>
-            <div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                </p>
-            </div>
+<div class="banner-section">
+    <div class="container">
+    <div class="text-center heading">
+            Find the perfect opportunity to change the world.
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-search icon"></i> </span>
+        </div> 
+        <input type="text" class="form-control" placeholder="Search by keyword, skill, or interest">   
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-map-marker-alt icon"></i> </span>
+        </div>  
+        <input type="text" class="form-control" placeholder="Philadelphia PA" id="location">
+        <div class="input-group-append">
+        <span class="input-group-text"><button type="button" class="btn btn-info">Search</button> </span>
         </div>
     </div>
+    <div id="lblresult"></div>
+    </div>
+</div>
+<div id="map" style="height:200px;"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="company-list">
+                <li class="active">
+                    <h5>Web Designer</h5>
+                    <h6>
+                        <span class="company-name">One Firefly </span>
+                        <span class="review">2 review </span>
+                    </h6>
+                    <div class="location">Philadelphia, PA</div>
+                    <div class="summary">
+                            One Firefly is headquartered in Davie, Florida and has been operating since 2007. Responsibilities include (but are not limited to):....
+                    </div>
+                </li>
+                <li >
+                    <h5>Web Designer</h5>
+                    <h6>
+                        <span class="company-name">One Firefly </span>
+                        <span class="review">2 review </span>
+                    </h6>
+                    <div class="location">Philadelphia, PA</div>
+                    <div class="summary">
+                            One Firefly is headquartered in Davie, Florida and has been operating since 2007. Responsibilities include (but are not limited to):....
+                    </div>
+                </li>
+                <li>
+                    <h5>Web Designer</h5>
+                    <h6>
+                        <span class="company-name">One Firefly </span>
+                        <span class="review">2 review </span>
+                    </h6>
+                    <div class="location">Philadelphia, PA</div>
+                    <div class="summary">
+                            One Firefly is headquartered in Davie, Florida and has been operating since 2007. Responsibilities include (but are not limited to):....
+                    </div>
+                </li>
+                <li>
+                    <h5>Web Designer</h5>
+                    <h6>
+                        <span class="company-name">One Firefly </span>
+                        <span class="review">2 review </span>
+                    </h6>
+                    <div class="location">Philadelphia, PA</div>
+                    <div class="summary">
+                            One Firefly is headquartered in Davie, Florida and has been operating since 2007. Responsibilities include (but are not limited to):....
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <div class="job-details">
+                <div class="top">
+                    <h5>Web Designer</h5>
+                    <h6>
+                        <span class="company-name">One Firefly </span>
+                        <span class="review">2 review </span>
+                    </h6>
+                    <div class="location">Philadelphia, PA</div>
+                    <div>
+                        <button type="button" class="btn btn-info">Apply Now</button>
+                    </div>
+                </div>
+                <div id="vjs-desc">
+                    <p><b>Job Title: </b>Web Designer</p>
+                    <p><b>Reports to: </b>Web Team Manager<br>
+                        <b>Location: </b>Remote (Full-Time, Work-from-home position)</p>
+                    <p><b>POSITION SUMMARY: </b></p>
+                    <p>The Web Designer will be principally tasked with the management and deployment of 
+                        all client-facing web efforts all while providing exceptional client experience.
+                         Reporting to the Web Team Manager, this person will play an integral role in the
+                          production of the organization’s web-related product offerings while also making
+                          significant contributions to One Firefly’s growth and efficiency.</p>
+                    <p><b>Responsibilities include (but are not limited to): </b></p>
+                    <ul>
+                        <li>Produce One Firefly Design Model websites for clients</li>
+                        <li>Communicate with One Firefly clients throughout project lifecycles, always keeping 
+                            them apprised of project status</li>
+                        <li>Satisfy Web Maintenance Service requests and complete work-orders per SOW</li>
+                        <li>Setup and configure blogs on existing WordPress and Joomla websites</li>
+                        <li>SEO configure client websites, and perform a variety of SEO related tasks</li>
+                        <li>Perform basic graphic editing tasks as necessary; format, crop, resize images, etc.</li>
+                        <li>Perform basic server maintenance and DNS management</li>
+                        <li>Assist the department with internal web-related initiatives as necessary</li>
+                    </ul>
+                    <p><b>QUALIFICATIONS: </b></p>
+                    <ul>
+                        <li>Bachelor’s Degree in related discipline strongly preferred.</li>
+                        <li>Exceptional communication skills with both internal staff and clients</li>
+                        <li>Highly experienced using website Content Management Systems</li>
+                        <li>Basic experience using Joomla CMS preferred, but not required</li>
+                        <li>Basic HTML and Basic CSS knowledge preferred</li>
+                        <li>Basic PHP knowledge preferred, but not required</li>
+                        <li>Adobe Photoshop, Illustrator &amp; Dreamweaver experience preferred</li>
+                        <li>Familiarity with server cPanel strongly preferred</li>
+                        <li>Working knowledge of FTP</li>
+                        <li>Basic knowledge of SEO Standards and Principals</li>
+                        <li>Basic knowledge of Google Analytics and Google Search Console</li>
+                        <li>Demonstrated ability to manage multiple projects simultaneously, set priorities, 
+                            utilize resources and meet deadlines</li>
+                        <li>Meticulous attention to detail</li>
+                        <li>Impeccable knowledge of grammar and punctuation</li>
+                        <li>Proven record of Integrity</li>
+                        <li>Proven record of following through on commitments</li>
+                        <li>Exceptional written and verbal communications skills</li>
+                        <li>Quick learner</li>
+                        <li>High level of enthusiasm</li>
+                        <li>Proven problem solver that takes initiative</li>
+                        <li>Result oriented with a strong work ethic</li>
+                        <li>Delivers fanatical customer service</li>
+                        <li>Proven team player mentality</li>
+                        <li>Experience in technology/consumer electronics/home automation industries preferred,
+                             but not required</li>
+                    </ul>
+                    <p><b>About One Firefly: </b>
+                    </p><p>One Firefly is an award-winning marketing agency that caters to custom integration
+                         and security professionals including designers, integrators, installers, contractors,
+                          consultants, distributors, and manufacturers. One Firefly is headquartered in Davie,
+                           Florida and has been operating since 2007. One Firefly clients span the globe.</p>
+                    <p>Job Type: Full-time</p>
+                    <p>Experience:</p>
+                    <ul>
+                        <li>web design: 3 years (Required)</li>
+                        <li>Joomla: 3 years (Required)</li>
+                    </ul>
+                    <p>Education:</p>
+                    <ul>
+                        <li>Bachelor's (Required)</li>
+                    </ul>
+                    <p>Additional Compensation:</p>
+                    <ul>
+                        <li>Bonuses</li>
+                    </ul>
+                    <p>Benefits offered:</p>
+                    <ul>
+                        <li>Paid time off</li>
+                        <li>Other types of insurance</li>
+                        <li>Retirement benefits or accounts</li>
+                        <li>Education assistance or tuition reimbursement</li>
+                        <li>Flexible schedules</li>
+                        <li>Workplace perks such as food/coffee and flexible work schedules</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+</div>
+      
+  <!-- The Modal -->
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form action=" ">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+        
+       
+        
+      </div>
+    </div>
+  </div>
+   
     <footer>
         Copyright ©
     </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8SB7AdYDEc6tjQB4tU5MOYTbSsBtBw9I&callback=initMap"
+   type="text/javascript"></script>
+   <scrip src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></scrip>
+    <script src="assets/js/job-search.js"></script>
+    
 
 </body>
 </html>
